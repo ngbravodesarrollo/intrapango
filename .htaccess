@@ -1,0 +1,26 @@
+# .htaccess -> archivo de configuracion de apache que funciona por CARPETAS
+# chekear rewrite en casa, sino no funca
+# se separan los paramentos con un espacio
+# sirve para dar dependencia entre los nombres con los que llamo a las paginas y la URL final
+# de login-de-empleados quedaria Clogin.php
+
+RewriteEngine on
+RewriteRule ^login$ controllers/Clogin.php
+RewriteRule ^estilo-login$ style/login.css
+RewriteRule ^enviado$ controllers/cABMPartidos.php$ 
+
+RewriteRule ^alumnos$ controllers/CAlumnoPanel.php
+RewriteRule ^estilo-alumnos$ style/panelalumnos.css
+
+RewriteRule ^empleados$	controllers/CEmpleadoPanel.php
+RewriteRule ^estilo-empleados$ style/panelempleados.css
+
+RewriteRule ^iconuser$ img/icon-user.jpg
+RewriteRule ^iconinfo$ img/info.png
+
+RewriteRule ^editar-([1-9]+)-([1-2]+) controllers/cABMPartidos.php?id=$1&accion=$2
+RewriteRule ^eliminar-([1-9]+)-([1-2]+) controllers/cABMPartidos.php?id=$1&accion=$2
+RewriteRule ^nuevo([1-9]+)$ controllers/cABMPartidos.php?accion=$1
+
+RewriteRule ^estilo-partidos$ style/abmpartidos.css
+
