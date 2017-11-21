@@ -2,7 +2,7 @@
 /**
 * 
 */
-class LoginView extends View
+class vlogin extends View
 {
 	public $login;
 }

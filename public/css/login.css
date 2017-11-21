@@ -1,0 +1,42 @@
+body{
+	padding-left: 35%; 
+}
+form{
+	margin-top: 20%;
+	padding: 40px;
+	width: 200px;
+	height: 150px;
+	border: 3px;
+	background-color: #f74cf4;
+	border-radius: 0px 25px 0px 25px;
+	border-color: black;
+	border-style: solid;
+
+}
+
+#ingresa {
+
+ color: #3a7999;
+
+}
+#ingresa:hover {
+ background: #3a7999;
+ color: white;
+ box-shadow: inset 0 0 0 3px #3a7999;
+}
+
+
+#user, #pass{
+	margin-top: 10px;
+	margin-left: 10%; 
+	height: 25px;
+	float: left;
+}	
+
+form input[type="submit"]{
+	margin-top: 10px;
+	margin-left: 33.3%;
+	width: 80px;
+	height: 25px;
+	float: left;
+}
