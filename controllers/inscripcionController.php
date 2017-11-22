@@ -4,6 +4,14 @@ require '../models/inscripcionModel.php';
 require '../models/MMaterias.php';
 require '../views/inscripcion.php';
 
+if (!isset($_SESSION["id"])) {
+	//header("location:controllers/Clogin.php");
+  header("location:login");
+}
+else{
+	$userid= $_SESSION["id"];
+}
+
 if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "logout") {
   session_destroy();
 }
@@ -26,7 +34,7 @@ $view->render();
 else{
   $catedra = $_POST["inscripcion"];
   $sesion = $_SESSION["id"];
-  $lel = (new inscripcionModel)->inscribir($catedra,$sesion);
+  $lel = (new inscripcionModel)->inscribir($catedra,$userid);
 }
 
 /*

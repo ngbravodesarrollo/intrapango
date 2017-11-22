@@ -12,7 +12,7 @@
   if (!isset($this->valor)) {
     ?>
     <h1>ELEGI UNA MATERIA FLACO  </h1>
-    <form action="../controllers/inscripcionController.php" method="post">
+    <form action="/alumno-inscripcion" method="post">
      <br><select name="catedra">
 <?php
       $y = count($this->materias);

@@ -38,11 +38,11 @@
 		$v->error= "no encontro usuario";
 	}
 	$v->render();
-	
+
 
 	function logout(){
 		 session_destroy();
 		 header("location:login");
 	}
 
-?> 
+?>
