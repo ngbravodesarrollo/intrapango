@@ -28,11 +28,6 @@
 			if($_SESSION['id_rol'] == 50){
 				header("location:alumnos");
 			}
-<<<<<<< HEAD
-		}else{
-			header("location:login");
-=======
->>>>>>> fa976916c2f8423dbae6efb9bc5f035949edf528
 		}
 		else{
 			$error="usuario invalido";
@@ -43,7 +38,7 @@
 		$v->error= "no encontro usuario";
 	}
 	$v->render();
-	
+
 
 	function logout(){
 		 session_destroy();

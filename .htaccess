@@ -1,6 +1,6 @@
 # .htaccess -> archivo de configuracion de apache que funciona por CARPETAS
 
 RewriteEngine on
-RewriteRule ^login$ controllers/loginController.php
+RewriteRule ^login$ controllers/Clogin.php
 RewriteRule ^estilo-login$ style/login.css
-
+RewriteRule ^alumno-inscripcion$ controllers/inscripcionController.php
