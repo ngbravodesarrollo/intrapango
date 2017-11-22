@@ -1,4 +1,4 @@
-<?php 
+<?php
 	//estamos en fw/Database.php
 
 	class Database{
@@ -32,18 +32,18 @@
 				$aux[] = $fila;
 			}
 			return $aux;
-		}	
+		}
 
 		public function numRows(){
 			return mysqli_num_rows($this->res);
 		}
 		private function connect(){
-			if(!$this->cn) $this->cn=mysqli_connect("localhost","root","","glec");
+			if(!$this->cn) $this->cn=mysqli_connect("localhost","root","","intrapango");
 		}
 
 		public function escape($str){
 			$this->connect();
 			return mysqli_escape_string($this->cn,$str);
-		}									
+		}
 	}
 ?>
