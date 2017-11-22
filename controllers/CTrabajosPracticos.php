@@ -7,7 +7,7 @@
 	require '../views/vtrabajospracticos.php';
 
 	if (!isset($_SESSION["id"])) {
-		header("location:maestros");
+		header("location:login");
 	}
 	//obtengo usuario
 	$userid= $_SESSION["id "];	

@@ -5,7 +5,23 @@
 </head>
 <body>
 <header></header>
-<main>Inicio session</main>
+<main>
+	<ul>
+		<li>
+			<a href=""></a>
+		</li>
+		<li>
+			<a href=""></a>
+		</li>
+		<li>
+			<a href=""></a>
+		</li>
+		<li>
+			<a href=""></a>
+		</li>
+	</ul>
+
+</main>
 <footer></footer>
 </body>
 </html>

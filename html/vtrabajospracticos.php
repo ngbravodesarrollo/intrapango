@@ -53,7 +53,7 @@ if (isset($this->tps)) { ?>
 				<td>$value["id"]</td>
 				<td>$value["titulo"]</td>
 				<td>$value["descripcion"]</td>
-				<td><input type="buttom" value="Hacer"></td>
+				<td><input type="buttom" value="Hacer" onclick="location.href='';"></td>
 			</tr>
 			<?php	
 			} ?>
