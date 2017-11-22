@@ -4,6 +4,6 @@
 */
 class vlogin extends View
 {
-	public $login;
+	public $error;
 }
  ?>

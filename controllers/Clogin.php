@@ -10,7 +10,7 @@
 	if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "logout") {
 		session_destroy();
 	}
-
+	$error;
 	if(isset($_POST['user'],$_POST['pass'])){
 		$usuario = (new MPersonas)->validarUsuario($_POST['user'],sha1($_POST['pass']."pangolin"));
 
@@ -26,19 +26,24 @@
 				header("location:maestros");
 			}
 			if($_SESSION['id_rol'] == 50){
-				header("location:maestros");
+				header("location:alumnos");
 			}
+<<<<<<< HEAD
 		}else{
 			header("location:login");
+=======
+>>>>>>> fa976916c2f8423dbae6efb9bc5f035949edf528
 		}
-
-		$v = new vlogin;
-		$v->render();
-
-	}else{
-		$v = new vlogin;
-		$v->render();
+		else{
+			$error="usuario invalido";
+		}
 	}
+	$v = new vlogin;
+	if (isset($error)) {
+		$v->error= "no encontro usuario";
+	}
+	$v->render();
+	
 
 	function logout(){
 		 session_destroy();
