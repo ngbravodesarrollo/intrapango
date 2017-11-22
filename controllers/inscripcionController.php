@@ -1,22 +1,31 @@
 <?php
 require '../fw/fw.php';
 require '../models/inscripcionModel.php';
+require '../models/MMaterias.php';
 require '../views/inscripcion.php';
-
+if(!isset($_POST["carrerita"])){
 $valor;
 $view = new inscripcionView;
 
 if (isset($_POST["catedra"])){
   $aux = $_POST["catedra"];
-  echo $aux;
+
   $valor = (new inscripcionModel)->catedra($aux);
   $view->valor=$valor;
-  var_dump($valor);
+
+}
+$view->materias = (new MMaterias)->materias();
+$view->render();
 }
 
+else{
+  $catedra = $_POST["inscripcion"];
+  $sesion = $_SESSION["id"];
+  $lel = (new inscripcionModel)->inscribir($catedra,$sesion);
+}
 
-
-
-
-$view->materias = (new inscripcionModel)->materias();
-$view->render();
+/*
+public function inscribir($catedra, $usuario){
+  $this->db->query("INSERT INTO p_alumnos_catedras (id_alumno, id_catedra)
+  VALUES ('$usuario', '$catedra' ");
+*/

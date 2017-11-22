@@ -33,16 +33,18 @@ if (isset($this->valor)){ ?>
   <form action="../controllers/inscripcionController.php" method="post">
    <br><select name="inscripcion">
      <?php
-           $y = count($this->materias);
+           $y = count($this->valor);
           for ($i=0;$i<$y;$i++){
             ?>
             <option value=<?=$this->valor[$i]["id"]?>><?= $this->valor[$i]["turno"] ?></option>
         <?php } ?>
 
        </select>
+       <input type=hidden name=carrerita value=<?=$this->valor[0]["id_materia"]?>>
         <input type="submit" value="Submit">
 
       </form>
+
 
 
 <?php
