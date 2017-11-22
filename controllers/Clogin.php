@@ -25,6 +25,9 @@
 			if($_SESSION['id_rol'] == 60){
 				header("location:maestros");
 			}
+			if($_SESSION['id_rol'] == 50){
+				header("location:maestros");
+			}
 		}else{
 			header("location:login");	
 		}
