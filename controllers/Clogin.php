@@ -13,7 +13,7 @@
 
 	if(isset($_POST['user'],$_POST['pass'])){
 		$usuario = (new MPersonas)->validarUsuario($_POST['user'],sha1($_POST['pass']."pangolin"));
-	
+
 		if($usuario == TRUE){
 			if(!isset($_SESSION)){
 				session_start();
@@ -26,7 +26,7 @@
 				header("location:maestros");
 			}
 		}else{
-			header("location:login");	
+			header("location:login");
 		}
 
 		$v = new vlogin;
@@ -42,4 +42,4 @@
 		 header("location:login");
 	}
 
-?> 
+?>
