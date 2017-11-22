@@ -3,6 +3,11 @@ require '../fw/fw.php';
 require '../models/inscripcionModel.php';
 require '../models/MMaterias.php';
 require '../views/inscripcion.php';
+
+if (isset($_REQUEST["action"]) && $_REQUEST["action"] == "logout") {
+  session_destroy();
+}
+
 if(!isset($_POST["carrerita"])){
 $valor;
 $view = new inscripcionView;
